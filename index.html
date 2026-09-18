@@ -31,7 +31,7 @@
   header h1{margin:0 0 6px 0; font-size:1.6rem;}
   header p{margin:0; opacity:0.95; font-size:0.95rem;}
   .container{
-    max-width:820px;
+    max-width:840px;
     margin:24px auto;
     padding:0 16px;
   }
@@ -60,6 +60,15 @@
   }
   .section-title h2{margin:0; font-size:1.15rem; color:var(--secondary);}
   .section-desc{font-size:0.9rem; color:#555; margin:0 0 16px 44px;}
+  .wordbank{
+    background:#eef6ff;
+    border:1px dashed var(--secondary);
+    border-radius:8px;
+    padding:10px 14px;
+    margin:0 0 16px 0;
+    font-size:0.9rem;
+  }
+  .wordbank strong{color:var(--secondary);}
   .question{
     margin-bottom:16px;
     padding-bottom:14px;
@@ -76,7 +85,7 @@
     font-family:inherit;
   }
   textarea{resize:vertical; min-height:130px;}
-  input[type="text"].short{max-width:260px;}
+  input[type="text"].short{max-width:320px;}
   label.top{display:block; font-weight:600; margin-bottom:6px; font-size:0.92rem;}
   .required{color:var(--bad);}
   .reading-passage{
@@ -91,6 +100,8 @@
   .reading-passage h3{margin-top:0;}
   .tf-options{display:flex; gap:18px; margin-top:4px;}
   .tf-options label{font-weight:normal; display:flex; align-items:center; gap:5px; cursor:pointer;}
+  .mc-options{display:flex; flex-direction:column; gap:6px; margin-top:4px;}
+  .mc-options label{font-weight:normal; display:flex; align-items:flex-start; gap:8px; cursor:pointer; font-size:0.95rem;}
   .wordcount{font-size:0.8rem; color:#777; margin-top:4px;}
   button#submitBtn{
     display:block;
@@ -223,7 +234,8 @@
         <div class="badge">A</div>
         <h2>Vocabulary — Styles of Music</h2>
       </div>
-      <p class="section-desc">Choose the correct style of music for each description.</p>
+      <p class="section-desc">Complete each sentence with the correct style of music from the word bank. Use each word only once.</p>
+      <div class="wordbank"><strong>Word bank:</strong> classical, jazz, pop, rock, hip-hop, metal, R&amp;B, reggae, K-pop, J-pop</div>
       <div id="sectionA"></div>
     </div>
 
@@ -233,53 +245,96 @@
         <div class="badge">B</div>
         <h2>Vocabulary — The Music Business</h2>
       </div>
-      <p class="section-desc">Choose the correct word for each definition.</p>
+      <p class="section-desc">Complete each definition with the correct word from the word bank. Use each word only once.</p>
+      <div class="wordbank"><strong>Word bank:</strong> concert, fan, songwriter, drummer, lyrics, video, guitarist, keyboard player, band, manager</div>
       <div id="sectionB"></div>
     </div>
 
-    <!-- SECTION C: GRAMMAR - was/were affirmative/negative -->
+    <!-- SECTION C: GENERAL KNOWLEDGE QUIZ -->
     <div class="card">
       <div class="section-title">
         <div class="badge">C</div>
-        <h2>Grammar — <em>was / were</em> (affirmative &amp; negative)</h2>
+        <h2>Music General Knowledge</h2>
       </div>
-      <p class="section-desc">Complete each sentence with <strong>was, were, wasn't</strong> or <strong>weren't</strong>.</p>
+      <p class="section-desc">Choose the correct answer.</p>
       <div id="sectionC"></div>
     </div>
 
-    <!-- SECTION D: GRAMMAR - was/were questions -->
+    <!-- SECTION D: GRAMMAR - was/were affirmative/negative -->
     <div class="card">
       <div class="section-title">
         <div class="badge">D</div>
-        <h2>Grammar — <em>was / were</em> Questions</h2>
+        <h2>Grammar — <em>was / were</em> (affirmative &amp; negative)</h2>
       </div>
-      <p class="section-desc">Complete each question. Type only the missing word(s).</p>
+      <p class="section-desc">Complete each sentence with <strong>was, were, wasn't</strong> or <strong>weren't</strong>.</p>
       <div id="sectionD"></div>
     </div>
 
-    <!-- SECTION E: READING -->
+    <!-- SECTION E: GRAMMAR - was/were questions -->
     <div class="card">
       <div class="section-title">
         <div class="badge">E</div>
+        <h2>Grammar — <em>was / were</em> Questions</h2>
+      </div>
+      <p class="section-desc">Complete each question. Type only the missing word(s) (for example: <em>was</em>, <em>were</em>, <em>who</em>, <em>what were</em>...).</p>
+      <div id="sectionE"></div>
+    </div>
+
+    <!-- SECTION F: WORD ORDER -->
+    <div class="card">
+      <div class="section-title">
+        <div class="badge">F</div>
+        <h2>Grammar — Order the Words</h2>
+      </div>
+      <p class="section-desc">Put the words in the correct order to make a question. Write the complete question.</p>
+      <div id="sectionF"></div>
+    </div>
+
+    <!-- SECTION G: READING -->
+    <div class="card">
+      <div class="section-title">
+        <div class="badge">G</div>
         <h2>Reading Comprehension</h2>
       </div>
       <div class="reading-passage">
         <h3>Elena Ross: From Bedroom Singer to Global Star</h3>
-        <p>Elena Ross wasn't famous five years ago. She was a nurse in Chicago, and music was just her hobby. In her free time, she wrote songs and posted them online. One night, a video of her singing a jazz ballad went viral — it had over two million views in a week. Record labels were suddenly very interested. Her first album, released the following year, was a mixture of jazz, R&amp;B, and pop. It reached number three on the charts. Today, Elena performs in concerts all over the world, and she still writes all her own lyrics. "My life was completely different before," she says. "I wasn't a musician; I was just a fan of music."</p>
+        <p>Elena Ross wasn't famous five years ago. She was a nurse in a hospital in Chicago, and music was just her hobby. In her free time, she wrote songs and posted them online. One night, a video of her singing a jazz ballad went viral — it had over two million views in a week. Record labels were suddenly very interested. Her first album, released the following year, was a mixture of jazz, R&amp;B, and pop. It reached number three on the charts. She wasn't the only new artist that year, but she was the most surprising one. Today, Elena performs in concerts all over the world, and she still writes all her own lyrics. Her band has five members: a drummer, a guitarist, a keyboard player, and two backing singers. "My life was completely different before," she says. "I wasn't a musician; I was just a fan of music. Now, thousands of people are fans of mine."</p>
       </div>
-      <p class="section-desc" style="margin-left:0;">Read the text and mark each statement as <strong>True</strong> or <strong>False</strong>.</p>
-      <div id="sectionE"></div>
+      <p class="section-desc" style="margin-left:0; margin-bottom:10px;"><strong>G1.</strong> Read the text and mark each statement as <strong>True</strong> or <strong>False</strong>.</p>
+      <div id="sectionG_tf"></div>
+      <p class="section-desc" style="margin-left:0; margin-top:20px; margin-bottom:10px;"><strong>G2.</strong> Answer the questions with short answers, using information from the text.</p>
+      <div id="sectionG_open"></div>
     </div>
 
-    <!-- SECTION F: WRITING -->
+    <!-- SECTION H: ERROR CORRECTION -->
     <div class="card">
       <div class="section-title">
-        <div class="badge">F</div>
-        <h2>Writing</h2>
+        <div class="badge">H</div>
+        <h2>Find the Mistake</h2>
       </div>
-      <p class="section-desc" style="margin-left:0;">Write about a concert, party, trip, or event you went to in the past. Use <strong>was / were</strong> and <strong>wasn't / weren't</strong>. Write <strong>at least 60 words</strong>.</p>
-      <textarea id="writingAnswer" placeholder="Example: Last summer I went to a concert with my friends. It was amazing! The band wasn't well known, but..."></textarea>
-      <div class="wordcount" id="wordCount">0 words</div>
+      <p class="section-desc">Each sentence has one incorrect word in <strong>bold</strong>. Write the correct word.</p>
+      <div id="sectionH"></div>
+    </div>
+
+    <!-- SECTION I: WRITING -->
+    <div class="card">
+      <div class="section-title">
+        <div class="badge">I</div>
+        <h2>Writing Task 1 — A Past Event</h2>
+      </div>
+      <p class="section-desc" style="margin-left:0;">Write about a concert, party, trip, or event you went to in the past. Use <strong>was / were</strong> and <strong>wasn't / weren't</strong>. Write <strong>at least 80 words</strong>.</p>
+      <textarea id="writingAnswer1" placeholder="Example: Last summer I went to a concert with my friends. It was amazing! The band wasn't well known, but..."></textarea>
+      <div class="wordcount" id="wordCount1">0 words</div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">
+        <div class="badge">J</div>
+        <h2>Writing Task 2 — A Short Dialogue</h2>
+      </div>
+      <p class="section-desc" style="margin-left:0;">Write a short conversation (6–8 lines) between two friends talking about a concert or party. Use phrases like <em>"How was...?", "It was...", "Were you...?"</em>. Write <strong>at least 40 words</strong>.</p>
+      <textarea id="writingAnswer2" placeholder="A: Hi! How was the concert last night?&#10;B: It was amazing! ..."></textarea>
+      <div class="wordcount" id="wordCount2">0 words</div>
     </div>
 
     <div id="errorMsg"></div>
@@ -289,9 +344,9 @@
 
   <div id="result">
     <h2>✅ Exam Submitted!</h2>
-    <p>Your automatic score (Sections A–E):</p>
-    <div class="score" id="finalScore">0 / 35</div>
-    <p style="margin-top:14px; color:#444;">Your writing (Section F) will be reviewed by your teacher.</p>
+    <p>Your automatic score (Sections A–H):</p>
+    <div class="score" id="finalScore">0 / 0</div>
+    <p style="margin-top:14px; color:#444;">Your writing (Tasks 1 &amp; 2) will be reviewed by your teacher.</p>
   </div>
 
 </div>
@@ -304,39 +359,55 @@
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwMcPYtxvAOMJ27OCfAGlh3ryxsTQrbDjMWuDHSuVB0tcF18bnNHnGrMKKcWEpwLkWu/exec";
 
 /* ============================================================
-   SECTION A — Styles of music
+   SECTION A — Styles of music (fill in the blank)
    ============================================================ */
-const styleOptions = ["classical","jazz","pop","rock","hip-hop","metal","R&B","reggae"];
 const sectionAData = [
-  { text: "This style was made famous by the band Black Sabbath. It's fast, loud, and heavy.", answer: "metal" },
-  { text: "Beethoven and Mozart were famous composers of this style.", answer: "classical" },
-  { text: "This style of music comes from Jamaica, in the Caribbean.", answer: "reggae" },
-  { text: "Fashion is a very important part of this music style, which often includes rapping.", answer: "hip-hop" },
-  { text: "Beyoncé is one of the most famous singers of this style.", answer: "R&B" },
-  { text: "This is a very popular, catchy style that a lot of teenagers listen to.", answer: "pop" },
-  { text: "U2 is one of the most famous bands of this style.", answer: "rock" },
-  { text: "This style started in the U.S. and often includes instruments like the trumpet and saxophone, with a lot of improvisation.", answer: "jazz" }
+  { text: "This style was made famous by the band Black Sabbath. It's fast, loud, and heavy.", answer: ["metal"] },
+  { text: "Beethoven and Mozart were famous composers of this style.", answer: ["classical"] },
+  { text: "This style of music comes from Jamaica, in the Caribbean.", answer: ["reggae"] },
+  { text: "Fashion is a very important part of this music style, which often includes rapping.", answer: ["hip-hop","hip hop"] },
+  { text: "Beyoncé is one of the most famous singers of this style.", answer: ["r&b","rnb","r & b"] },
+  { text: "This is a very popular, catchy style that a lot of teenagers listen to.", answer: ["pop"] },
+  { text: "U2 is one of the most famous bands of this style.", answer: ["rock"] },
+  { text: "This style started in the U.S. and often includes instruments like the trumpet and saxophone, with a lot of improvisation.", answer: ["jazz"] },
+  { text: "Groups with many members, like Girls' Generation, that sing mostly in Korean, are part of this style.", answer: ["k-pop","kpop","k pop"] },
+  { text: "This style of pop music comes from Japan.", answer: ["j-pop","jpop","j pop"] }
 ];
 
 /* ============================================================
-   SECTION B — Music business vocabulary
+   SECTION B — Music business vocabulary (fill in the blank)
    ============================================================ */
-const businessOptions = ["concert","fan","songwriter","drummer","lyrics","video","guitarist","keyboard player"];
 const sectionBData = [
-  { text: "A person who loves a singer or band and follows their music.", answer: "fan" },
-  { text: "A live performance where a band or singer plays music for an audience.", answer: "concert" },
-  { text: "A person who writes songs — the music and the words.", answer: "songwriter" },
-  { text: "The words of a song.", answer: "lyrics" },
-  { text: "A person who plays the drums in a band.", answer: "drummer" },
-  { text: "A person who plays the guitar in a band.", answer: "guitarist" },
-  { text: "A person who plays the piano in a band.", answer: "keyboard player" },
-  { text: "Short content that shows the visuals for a song and is often watched online.", answer: "video" }
+  { text: "A person who loves a singer or band and follows their music.", answer: ["fan"] },
+  { text: "A live performance where a band or singer plays music for an audience.", answer: ["concert"] },
+  { text: "A person who writes songs — the music and the words.", answer: ["songwriter"] },
+  { text: "The words of a song.", answer: ["lyrics"] },
+  { text: "A person who plays the drums in a band.", answer: ["drummer"] },
+  { text: "A person who plays the guitar in a band.", answer: ["guitarist"] },
+  { text: "A person who plays the piano in a band.", answer: ["keyboard player","keyboardist"] },
+  { text: "Short content that shows the visuals for a song and is often watched online.", answer: ["video"] },
+  { text: "A group of musicians who play music together.", answer: ["band"] },
+  { text: "A person who organizes a musician's career and business affairs.", answer: ["manager"] }
 ];
 
 /* ============================================================
-   SECTION C — was/were affirmative & negative
+   SECTION C — General knowledge quiz (multiple choice)
    ============================================================ */
 const sectionCData = [
+  { text: "Michael Jackson was known as the King of...", options:["Reggae","Pop","Jazz"], answer:"pop" },
+  { text: "The Beatles were originally from which city in England?", options:["London","Liverpool","Manchester"], answer:"liverpool" },
+  { text: "Freddie Mercury was the singer of which rock band?", options:["Queen","The Rolling Stones","Guns N' Roses"], answer:"queen" },
+  { text: "Reggaeton is originally from...", options:["Puerto Rico","Jamaica","Mexico"], answer:"puerto rico" },
+  { text: "J-pop is originally from...", options:["China","Japan","Korea"], answer:"japan" },
+  { text: "Which instrument is NOT usually part of a drum kit?", options:["Bass drum","Cymbals","Flute"], answer:"flute" },
+  { text: "Which instrument is NOT typically used in a classical orchestra?", options:["Violin","Electric guitar","Cello"], answer:"electric guitar" },
+  { text: "Compared to typical Western pop groups, K-pop groups usually have...", options:["Just one singer","Often many members (sometimes more than five)","Never more than two members"], answer:"often many members (sometimes more than five)" }
+];
+
+/* ============================================================
+   SECTION D — was/were affirmative & negative
+   ============================================================ */
+const sectionDData = [
   { text: "Elvis Presley ______ a famous singer from the U.S. (✓)", answer: ["was"] },
   { text: "Freddie Mercury ______ born in England — he was born in Zanzibar. (✗)", answer: ["wasn't","was not"] },
   { text: "The Beatles ______ from Liverpool. (✓)", answer: ["were"] },
@@ -344,56 +415,75 @@ const sectionCData = [
   { text: "My grandparents ______ big fans of rock music when they were young. (✓)", answer: ["were"] },
   { text: "The concert last night ______ boring — it was amazing! (✗)", answer: ["wasn't","was not"] },
   { text: "I ______ at school yesterday. I was sick. (✗)", answer: ["wasn't","was not"] },
-  { text: "You and your friends ______ at the party on Saturday. (✓)", answer: ["were"] }
+  { text: "You and your friends ______ at the party on Saturday. (✓)", answer: ["were"] },
+  { text: "The K-pop group in the radio program ______ very popular in several countries. (✓)", answer: ["was"] },
+  { text: "Elena Ross ______ a professional musician before her video went viral. (✗)", answer: ["wasn't","was not"] }
 ];
 
 /* ============================================================
-   SECTION D — was/were questions
+   SECTION E — was/were questions
    ============================================================ */
-const sectionDData = [
+const sectionEData = [
   { text: "A: ______ you at the concert last Friday? &nbsp; B: Yes, I was.", answer: ["were"] },
   { text: "A: ______ your favorite singer born in the U.S.? &nbsp; B: No, she wasn't. She was born in Canada.", answer: ["was"] },
   { text: "A: ______ was the winner of the competition? &nbsp; B: The two brothers, Alex and Oscar.", answer: ["who"] },
   { text: "A: ______ was your first concert? &nbsp; B: It was in 2019.", answer: ["when"] },
   { text: "A: ______ were you late for class? &nbsp; B: Because the bus was late.", answer: ["why"] },
-  { text: "A: Were John and Paul in the same band? &nbsp; B: Yes, they ______.", answer: ["were"] }
+  { text: "A: Were John and Paul in the same band? &nbsp; B: Yes, they ______.", answer: ["were"] },
+  { text: "A: ______ Shawn Mendes's first album a big success? &nbsp; B: Yes, it was — it reached the Top 5.", answer: ["was"] },
+  { text: "A: ______ his hobbies before he was famous? &nbsp; B: They were ice hockey and soccer.", answer: ["what were"] }
 ];
 
 /* ============================================================
-   SECTION E — Reading comprehension (True/False)
+   SECTION F — Order the words to make a question
    ============================================================ */
-const sectionEData = [
+const sectionFData = [
+  { text: "do / you / What / enjoy / music / kind / of ?", answer: "what kind of music do you enjoy" },
+  { text: "band / your / favorite / What's ?", answer: "what's your favorite band" },
+  { text: "a / play / musical / instrument / Can / you ?", answer: "can you play a musical instrument" },
+  { text: "first / was / favorite / band / your / What ?", answer: "what was your first favorite band" },
+  { text: "song / your / favorite / What's ?", answer: "what's your favorite song" }
+];
+
+/* ============================================================
+   SECTION G — Reading comprehension
+   ============================================================ */
+const sectionG_tfData = [
   { text: "Elena Ross was a professional musician before she became famous.", answer: "false" },
   { text: "A video of Elena singing a jazz song became very popular online.", answer: "true" },
   { text: "Elena's first album was only pop music.", answer: "false" },
   { text: "Elena's first album reached number three on the charts.", answer: "true" },
-  { text: "Elena doesn't write her own lyrics anymore.", answer: "false" }
+  { text: "Elena's band has five members.", answer: "true" }
+];
+
+const sectionG_openData = [
+  { text: "What was Elena's job before she became famous?", keywords: ["nurse"] },
+  { text: "How many views did her video get in one week?", keywords: ["two million","2 million","2,000,000"] },
+  { text: "What three styles of music are mixed in her first album?", keywords: ["jazz","r&b","pop"] },
+  { text: "What position did Elena's first album reach on the charts?", keywords: ["number three","3","#3","third"] }
+];
+
+/* ============================================================
+   SECTION H — Find the mistake
+   ============================================================ */
+const sectionHData = [
+  { text: "Selena Gomez is a famous <strong>band</strong>.", answer: ["singer"] },
+  { text: "Michael Jackson was <strong>British</strong>.", answer: ["american"] },
+  { text: "Elena Ross was a <strong>teacher</strong> before she was famous.", answer: ["nurse"] },
+  { text: "Reggae bands typically use <strong>pianos</strong> as one of their main instruments.", answer: ["guitars","guitar","bass guitar","bass"] },
+  { text: "J-pop is from <strong>China</strong>.", answer: ["japan"] }
 ];
 
 /* ============================================================
    RENDER FUNCTIONS
    ============================================================ */
-function renderSelectQuestion(container, idx, prefix, item, options){
+function renderTextQuestion(container, idx, prefix, item, longer){
   const div = document.createElement('div');
   div.className = 'question';
   const id = prefix + idx;
   div.innerHTML = `
     <div class="qtext">${idx+1}. ${item.text}</div>
-    <select id="${id}" required>
-      <option value="" disabled selected>Select an answer...</option>
-      ${options.map(o => `<option value="${o}">${o}</option>`).join('')}
-    </select>
-  `;
-  container.appendChild(div);
-}
-
-function renderTextQuestion(container, idx, prefix, item){
-  const div = document.createElement('div');
-  div.className = 'question';
-  const id = prefix + idx;
-  div.innerHTML = `
-    <div class="qtext">${idx+1}. ${item.text}</div>
-    <input type="text" class="short" id="${id}" required autocomplete="off">
+    <input type="text" class="${longer ? '' : 'short'}" id="${id}" required autocomplete="off">
   `;
   container.appendChild(div);
 }
@@ -412,29 +502,63 @@ function renderTFQuestion(container, idx, prefix, item){
   container.appendChild(div);
 }
 
+function renderMCQuestion(container, idx, prefix, item){
+  const div = document.createElement('div');
+  div.className = 'question';
+  const id = prefix + idx;
+  const letters = ['a','b','c'];
+  const optionsHtml = item.options.map((opt, oi) => `
+      <label><input type="radio" name="${id}" value="${opt.toLowerCase()}" required> ${letters[oi]}) ${opt}</label>
+  `).join('');
+  div.innerHTML = `
+    <div class="qtext">${idx+1}. ${item.text}</div>
+    <div class="mc-options">${optionsHtml}</div>
+  `;
+  container.appendChild(div);
+}
+
 const secA = document.getElementById('sectionA');
-sectionAData.forEach((item, i) => renderSelectQuestion(secA, i, 'A', item, styleOptions));
+sectionAData.forEach((item, i) => renderTextQuestion(secA, i, 'A', item, false));
 
 const secB = document.getElementById('sectionB');
-sectionBData.forEach((item, i) => renderSelectQuestion(secB, i, 'B', item, businessOptions));
+sectionBData.forEach((item, i) => renderTextQuestion(secB, i, 'B', item, false));
 
 const secC = document.getElementById('sectionC');
-sectionCData.forEach((item, i) => renderTextQuestion(secC, i, 'C', item));
+sectionCData.forEach((item, i) => renderMCQuestion(secC, i, 'C', item));
 
 const secD = document.getElementById('sectionD');
-sectionDData.forEach((item, i) => renderTextQuestion(secD, i, 'D', item));
+sectionDData.forEach((item, i) => renderTextQuestion(secD, i, 'D', item, false));
 
 const secE = document.getElementById('sectionE');
-sectionEData.forEach((item, i) => renderTFQuestion(secE, i, 'E', item));
+sectionEData.forEach((item, i) => renderTextQuestion(secE, i, 'E', item, false));
+
+const secF = document.getElementById('sectionF');
+sectionFData.forEach((item, i) => renderTextQuestion(secF, i, 'F', item, true));
+
+const secG_tf = document.getElementById('sectionG_tf');
+sectionG_tfData.forEach((item, i) => renderTFQuestion(secG_tf, i, 'Gtf', item));
+
+const secG_open = document.getElementById('sectionG_open');
+sectionG_openData.forEach((item, i) => renderTextQuestion(secG_open, i, 'Gopen', item, true));
+
+const secH = document.getElementById('sectionH');
+sectionHData.forEach((item, i) => renderTextQuestion(secH, i, 'H', item, false));
 
 /* ============================================================
-   WORD COUNTER for writing section
+   WORD COUNTERS for writing sections
    ============================================================ */
-const writingBox = document.getElementById('writingAnswer');
-const wordCountEl = document.getElementById('wordCount');
-writingBox.addEventListener('input', () => {
-  const words = writingBox.value.trim().split(/\s+/).filter(w => w.length > 0);
-  wordCountEl.textContent = words.length + " words" + (words.length < 60 ? " (minimum 60)" : " ✓");
+const writingBox1 = document.getElementById('writingAnswer1');
+const wordCountEl1 = document.getElementById('wordCount1');
+writingBox1.addEventListener('input', () => {
+  const words = writingBox1.value.trim().split(/\s+/).filter(w => w.length > 0);
+  wordCountEl1.textContent = words.length + " words" + (words.length < 80 ? " (minimum 80)" : " ✓");
+});
+
+const writingBox2 = document.getElementById('writingAnswer2');
+const wordCountEl2 = document.getElementById('wordCount2');
+writingBox2.addEventListener('input', () => {
+  const words = writingBox2.value.trim().split(/\s+/).filter(w => w.length > 0);
+  wordCountEl2.textContent = words.length + " words" + (words.length < 40 ? " (minimum 40)" : " ✓");
 });
 
 /* ============================================================
@@ -443,6 +567,9 @@ writingBox.addEventListener('input', () => {
 function normalize(str){
   return (str || "").trim().toLowerCase().replace(/\s+/g,' ');
 }
+function normalizeLoose(str){
+  return (str || "").trim().toLowerCase().replace(/[?.!,]/g,'').replace(/\s+/g,' ');
+}
 
 // Builds the score + payload from whatever has been answered so far.
 // (works both for a normal, complete submission and for a partial
@@ -450,8 +577,10 @@ function normalize(str){
 function buildPayload(statusLabel){
   const studentName = document.getElementById('studentName').value.trim() || "(not entered)";
   const studentEmail = document.getElementById('studentEmail').value.trim() || "(not entered)";
-  const writingText = writingBox.value.trim();
-  const writingWords = writingText.split(/\s+/).filter(w => w.length > 0).length;
+  const writingText1 = writingBox1.value.trim();
+  const writingWords1 = writingText1.split(/\s+/).filter(w => w.length > 0).length;
+  const writingText2 = writingBox2.value.trim();
+  const writingWords2 = writingText2.split(/\s+/).filter(w => w.length > 0).length;
 
   let score = 0;
   let maxScore = 0;
@@ -462,7 +591,7 @@ function buildPayload(statusLabel){
     const el = document.getElementById('A'+i);
     const val = el ? el.value : "";
     detail['A'+(i+1)] = val;
-    if(normalize(val) === normalize(item.answer)) score++;
+    if(item.answer.some(a => normalize(a) === normalize(val))) score++;
   });
 
   sectionBData.forEach((item, i) => {
@@ -470,15 +599,16 @@ function buildPayload(statusLabel){
     const el = document.getElementById('B'+i);
     const val = el ? el.value : "";
     detail['B'+(i+1)] = val;
-    if(normalize(val) === normalize(item.answer)) score++;
+    if(item.answer.some(a => normalize(a) === normalize(val))) score++;
   });
 
   sectionCData.forEach((item, i) => {
     maxScore++;
-    const el = document.getElementById('C'+i);
-    const val = el ? el.value : "";
+    const radios = document.getElementsByName('C'+i);
+    let val = "";
+    radios.forEach(r => { if(r.checked) val = r.value; });
     detail['C'+(i+1)] = val;
-    if(item.answer.some(a => normalize(a) === normalize(val))) score++;
+    if(normalize(val) === normalize(item.answer)) score++;
   });
 
   sectionDData.forEach((item, i) => {
@@ -491,11 +621,44 @@ function buildPayload(statusLabel){
 
   sectionEData.forEach((item, i) => {
     maxScore++;
-    const radios = document.getElementsByName('E'+i);
+    const el = document.getElementById('E'+i);
+    const val = el ? el.value : "";
+    detail['E'+(i+1)] = val;
+    if(item.answer.some(a => normalize(a) === normalize(val))) score++;
+  });
+
+  sectionFData.forEach((item, i) => {
+    maxScore++;
+    const el = document.getElementById('F'+i);
+    const val = el ? el.value : "";
+    detail['F'+(i+1)] = val;
+    if(normalizeLoose(val) === normalizeLoose(item.answer)) score++;
+  });
+
+  sectionG_tfData.forEach((item, i) => {
+    maxScore++;
+    const radios = document.getElementsByName('Gtf'+i);
     let val = "";
     radios.forEach(r => { if(r.checked) val = r.value; });
-    detail['E'+(i+1)] = val;
+    detail['G_tf'+(i+1)] = val;
     if(normalize(val) === normalize(item.answer)) score++;
+  });
+
+  sectionG_openData.forEach((item, i) => {
+    maxScore++;
+    const el = document.getElementById('Gopen'+i);
+    const val = el ? el.value : "";
+    detail['G_open'+(i+1)] = val;
+    const normVal = normalize(val);
+    if(item.keywords.some(k => normVal.indexOf(normalize(k)) !== -1)) score++;
+  });
+
+  sectionHData.forEach((item, i) => {
+    maxScore++;
+    const el = document.getElementById('H'+i);
+    const val = el ? el.value : "";
+    detail['H'+(i+1)] = val;
+    if(item.answer.some(a => normalize(a) === normalize(val))) score++;
   });
 
   return {
@@ -507,8 +670,10 @@ function buildPayload(statusLabel){
     score: score,
     maxScore: maxScore,
     percentage: Math.round((score/maxScore)*100),
-    writing: writingText,
-    writingWordCount: writingWords,
+    writing1: writingText1,
+    writingWordCount1: writingWords1,
+    writing2: writingText2,
+    writingWordCount2: writingWords2,
     answers: JSON.stringify(detail)
   };
 }
@@ -537,12 +702,19 @@ document.getElementById('examForm').addEventListener('submit', function(e){
     return;
   }
 
-  const writingText = writingBox.value.trim();
-  const writingWords = writingText.split(/\s+/).filter(w => w.length > 0).length;
-  if(writingWords < 60){
-    errorBox.textContent = "Your writing answer must be at least 60 words (currently " + writingWords + ").";
+  const words1 = writingBox1.value.trim().split(/\s+/).filter(w => w.length > 0).length;
+  if(words1 < 80){
+    errorBox.textContent = "Writing Task 1 must be at least 80 words (currently " + words1 + ").";
     errorBox.style.display = 'block';
-    writingBox.scrollIntoView({behavior:'smooth', block:'center'});
+    writingBox1.scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+
+  const words2 = writingBox2.value.trim().split(/\s+/).filter(w => w.length > 0).length;
+  if(words2 < 40){
+    errorBox.textContent = "Writing Task 2 must be at least 40 words (currently " + words2 + ").";
+    errorBox.style.display = 'block';
+    writingBox2.scrollIntoView({behavior:'smooth', block:'center'});
     return;
   }
 
@@ -601,7 +773,6 @@ function lockExam(){
   document.getElementById('lockOverlay').style.display = 'flex';
 
   sendPayload(payload).catch(function(err){
-    // Even if sending fails, keep the exam locked on the student's side.
     console.error("Error sending locked exam:", err);
   });
 }
